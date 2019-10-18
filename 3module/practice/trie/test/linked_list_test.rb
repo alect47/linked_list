@@ -24,4 +24,16 @@ class LinkedListTest < MiniTest::Test
     assert_equal 1, @list.count
     assert_equal "The West family", @list.to_string
   end
+
+  def test_multiple_append
+    skip  
+    @list.append("Rhodes")
+    assert_equal 'Rhodes', @list.head.surname
+
+    @list.append("Hardy")
+    assert_equal 2, @list.count
+    assert_equal "Hardy", @list.head.next_node.surname
+    phrase = 'The Rhodes family, followed by the Hardy family'
+    assert_equal phrase, @list.to_string
+  end
 end

@@ -5,7 +5,11 @@ class Node
     @next_node = next_node
   end
 
-  def count
-    1
-  end
+  # def count
+  #   binding.pry
+  # end
+
+  # def next_node(surname)
+  #   @next_node = Node.new(surname)
+  # end
 end
